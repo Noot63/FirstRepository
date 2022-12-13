@@ -1,32 +1,23 @@
+import Service.MainService;
 import com.academy.Course;
 import com.academy.Lecture;
-import com.academy.Student;
-
-import java.sql.SQLOutput;
-
 
 
 public class Main {
-    // public static void main(String[] args){
-    //   Lecture firstLecture = new Lecture();
-    //  Lecture secondLecture = new Lecture();
-    // Lecture thirdLecture = new Lecture();
-
-    //System.out.println(Lecture.counter);
-    //   System.out.println(Student.counter);
 
 
     public static void main(String[] args) {
-        Course course = new Course(1);
+        Course course1 = new Course("1", "Математичні дії");
 
-        Lecture lecture = new Lecture(1, course.getID());
-        Lecture lecturesecond = new Lecture(2, course.getID());
-        Lecture lecturethird = new Lecture(3, course.getID());
-        Lecture lecturefource = new Lecture(4, course.getID());
-        Lecture lecturefifse = new Lecture(5, course.getID());
-        Lecture lecturesix = new Lecture(6, course.getID());
+        Lecture lectureone = new Lecture("1","Додавання");
+        Lecture lecturesecond = new Lecture(12,"Віднімання");
+        Lecture lecturethird = new Lecture(3, "Ділення");
+        Lecture lecturefource = new Lecture(4, "Множення");
+        Lecture lecturefifse = new Lecture(5, "Відсотки" );
+        Lecture lecturesix = new Lecture(6, "Корені");
 
-        System.out.println(lecturesix);
+        int category = MainService.choiceOfCategory(MainService.choiceone());
+        MainService.choicetwo();
 
     }
 }
