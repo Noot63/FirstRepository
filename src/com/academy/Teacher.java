@@ -1,7 +1,12 @@
 package com.academy;
 
 public class Teacher {
-    private static long ID;
-    public static long counter;
-    private String TeacherName;
+    public String teachName;
+    public int teachCourseId;
+
+    public Teacher(String teachName, int teachCourseId) {
+        this.teachName = teachName;
+        this.teachCourseId = teachCourseId;
+    }
 }
+
