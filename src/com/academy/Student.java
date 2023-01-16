@@ -1,7 +1,11 @@
 package com.academy;
 
 public class Student {
-    private static long ID;
-    public static long counter;
-    private String StudentName;
+    public String stNane;
+    public int stCourseId;
+
+    public Student(String stNane, int stCourseId) {
+        this.stNane = stNane;
+        this.stCourseId = stCourseId;
+    }
 }
