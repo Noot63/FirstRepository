@@ -1,14 +1,25 @@
 package com.academy;
 
 public class Lecture {
-    public long ID;
-    public long courseID;
+    public String name;
+    public int id;
+    public static int count = 0;
 
-    public Lecture(long ID, long courseID) {
-        this.ID = ID;
-        this.courseID = courseID;
+    public String getName() {
+        return name;
     }
-    public Lecture createlecture(long ID, long courseID) {
-        return new Lecture(ID, courseID);
+
+    public int getId() {
+        return id;
+    }
+
+    public Lecture() {
+        count++;
+    }
+
+    public Lecture(String name, int id) {
+        this.name = name;
+        this.id = id;
+        count++;
     }
 }

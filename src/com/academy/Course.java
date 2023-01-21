@@ -1,15 +1,11 @@
 package com.academy;
 
 public class Course {
+    int id;
 
-        private long ID;
-
-
-    public Course(long ID) {
-        this.ID = ID;
+    public Course(int id) {
+        this.id = id;
     }
-    public long getID() {
-        return ID;
-    }
-
 }
+
+
