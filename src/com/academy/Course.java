@@ -1,11 +1,16 @@
 package com.academy;
 
-public class Course {
-    int id;
+ public class Course extends SuperClass  {
+     public static int count;
 
-    public Course(int id) {
-        this.id = id;
-    }
-}
+     public Course(String name, int id) {
+         super(name, id);
+         count++;
+     }
+
+     public static int getCount() {
+         return count;
+     }
+ }
 
 

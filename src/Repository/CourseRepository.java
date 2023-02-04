@@ -1,18 +1,21 @@
 package Repository;
 
+
 import com.academy.Course;
-public class CourseRepository {
-  static Course[] courses = new Course[3];
+import com.academy.SuperClass;
 
-  public static Course[] getCourses() {
-    return courses;
+class CourseRepository extends SuperRepository {
+  private static Course[] courses = new Course[3];
+  @Override
+  protected void addEnt() {
+    Course course = new Course("Java developer", 1);
+    System.out.println("Amount of added entities is " + course.count);
   }
 
-  public static void main(String[] args) {
-    Course course = new Course(1);
-    courses[0] = course;
-  }
+
 }
+
+
 
 
 

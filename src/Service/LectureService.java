@@ -1,40 +1,19 @@
 package Service;
 
 import Repository.LectureRepository;
+import com.academy.Lecture;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static Repository.LectureRepository.lectures;
+
 public class LectureService {
-    public static int counterLecture;
-    private static long ID;
-    public static long counter;
-
-    public static int getI() {
-        Scanner scanner = new Scanner(System.in);
-
-        int i = 0;
-        try {
-            i = scanner.nextInt();
-            if (i < 0 && i > 5) {
-                throw new InputMismatchException();
-            }
-        } catch (Exception e) {
-            System.out.println("Incorrect format, please try again");
-            System.out.println();
-            return getI();
-        }
-        return i;
-    }
-
-    public static void getListOfLectures() {
-        System.out.println("This Course contains the following lectures:");
-        for (int j = 0; j < counterLecture; j++) {
-            System.out.println("Lecture # " + LectureRepository.lectures[j].id);
-        }
-    }
-
-    public static void counterLecture() {
+    public static void main(String[] args) {
+        Lecture lecture = new Lecture("Вступ", 1);
+        lectures[0] = lecture;
+        lectures[1] = new Lecture("Класи", 2);
+        lectures[2] = new Lecture("Методи", 3);
 
     }
 }

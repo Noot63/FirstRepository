@@ -1,25 +1,33 @@
 package com.academy;
 
-public class Lecture {
-    public String name;
-    public int id;
-    public static int count = 0;
+ public class  Lecture extends SuperClass{
+     public static int count = 0;
 
-    public String getName() {
-        return name;
-    }
+     public Lecture() {
+         super();
+         count++;
+     }
 
-    public int getId() {
-        return id;
-    }
+     public Lecture(int id) {
+         super(id);
+     }
 
-    public Lecture() {
-        count++;
-    }
+     public Lecture(String name, int id) {
+         super(name, id);
+         count ++;
+     }
 
-    public Lecture(String name, int id) {
-        this.name = name;
-        this.id = id;
-        count++;
-    }
-}
+
+     public static int getCount() {
+         return count;
+     }
+
+     public static void setCount(int count) {
+         Lecture.count = count;
+     }
+
+     @Override
+     public String toString() {
+         return super.toString();
+     }
+ }
