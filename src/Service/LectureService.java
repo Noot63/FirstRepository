@@ -1,19 +1,19 @@
 package Service;
 
-import com.academy.Course;
+import Repository.LectureRepository;
 import com.academy.Lecture;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+import static Repository.LectureRepository.lectures;
 
 public class LectureService {
     public static void main(String[] args) {
-        Course course = new Course(8);
-        Lecture lecture1 = new Lecture(course.id);
-        Lecture lecture2 = new Lecture(course.id);
-        Lecture lecture3 = new Lecture(course.id);
-        Lecture lecture4 = new Lecture(course.id);
-        Lecture lecture5 = new Lecture(course.id);
-        Lecture lecture6 = new Lecture(course.id);
-        System.out.println("Total lectures created:" + Lecture.lectureCounter);
-        System.out.println();
-        System.out.println("Lecture coarse ID is " + lecture6.courseId);
+        Lecture lecture = new Lecture("Вступ", 1);
+        lectures[0] = lecture;
+        lectures[1] = new Lecture("Класи", 2);
+        lectures[2] = new Lecture("Методи", 3);
+
     }
 }
