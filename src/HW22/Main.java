@@ -14,7 +14,7 @@ public class Main {
                 break;
             }
 
-            System.out.println("Enter a logger level (DEBUG, INFO, WARNING, ERROR, OFF):");
+            System.out.println(" Enter a logger level (DEBUG, INFO, WARNING, ERROR, OFF ):");
             String level = scanner.nextLine();
             logger.log(message, LoggerLevel.fromString(level));
         }
